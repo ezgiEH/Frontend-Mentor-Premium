@@ -39,9 +39,6 @@ body main {
 }
 body .container {
   width: 76.4vw;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
 }
 body .container nav {
   height: 10vh;
@@ -110,13 +107,13 @@ body .container .hero .hero-image img {
   }
 }
 body .container .about {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 10vh;
+  margin: 10vh 0;
 }
 body .container .about .card {
   width: 286px;

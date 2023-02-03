@@ -59,7 +59,7 @@ body{
     }
     .container{
         width: 76.4vw;
-        height: max-content;
+        
         nav{
             height: 10vh;
             display: flex;
@@ -124,13 +124,13 @@ body{
         }
 
         .about{
-            height: 90vh;
+            height: 100vh;
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
             justify-content: center;
             gap: 25px;
-            margin-bottom: 10vh;
+            margin: 10vh 0;
             .card{
                 width: 286px;
                 height: 322px;
