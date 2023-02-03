@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: auto;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(180deg, hsl(0deg, 0%, 100%) 50%, hsl(234deg, 100%, 97%) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  body {
+    height: 400vh;
+  }
+}
+body button {
+  padding: 1.1rem 2.4rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  body button {
+    padding: 0.85rem 1.5rem;
+  }
+}
+body button a {
+  font-size: 18px;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+body main {
+  height: auto;
+}
+body .container {
+  width: 76.4vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+body .container nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  position: relative;
+}
+body .container nav .btn-dark {
+  background-color: hsl(233deg, 54%, 16%);
+}
+body .container nav .btn-dark:hover {
+  background-color: hsl(234deg, 25%, 52%);
+}
+body .container .hero {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  body .container .hero {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
+body .container .hero .hero-content {
+  flex: 1;
+}
+body .container .hero .hero-content h1 {
+  margin: 1rem 0;
+  color: hsl(233deg, 54%, 16%);
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: clamp(40px, 4vw, 70px);
+}
+body .container .hero .hero-content p {
+  margin: 1rem 0;
+  font-size: clamp(16px, 4vw, 18px);
+  line-height: clamp(20px, 4vw, 28px);
+  color: hsl(232deg, 10%, 56%);
+}
+body .container .hero .hero-content .btn-pink {
+  margin: 2rem 0;
+  background: linear-gradient(180deg, hsl(322deg, 87%, 55%) 50%, hsl(13deg, 100%, 64%) 100%);
+}
+body .container .hero .hero-content .btn-pink:hover {
+  opacity: 0.6;
+}
+body .container .hero .hero-image {
+  flex: 1;
+}
+body .container .hero .hero-image img {
+  width: 65vw;
+  height: 95vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: -30vw;
+  margin-top: -20vh;
+}
+@media screen and (max-width: 500px) {
+  body .container .hero .hero-image img {
+    width: 327px;
+    height: 301px;
+    margin-right: 0vw;
+    margin-top: 0vh;
+  }
+}
+body .container .about {
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 10vh;
+}
+body .container .about .card {
+  width: 286px;
+  height: 322px;
+  padding: 0 32px;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border-radius: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media screen and (max-width: 500px) {
+  body .container .about .card {
+    margin: 1rem 0;
+    height: 283px;
+  }
+}
+body .container .about .card h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+body .container .about .card p {
+  color: hsl(232deg, 10%, 56%);
+  font-size: 16px;
+  line-height: 28px;
+}
+body .container .about .card a {
+  text-decoration: none;
+  color: hsl(341deg, 92%, 62%);
+  font-weight: 700;
+}
+body .container .about .card a:hover {
+  opacity: 0.6;
+}
+body .container .about .card img {
+  width: 56px;
+  height: 56px;
+  margin-top: -56px;
+}
+body .container .about .card.card-pink {
+  background: linear-gradient(180deg, hsl(322deg, 87%, 55%) 50%, hsl(13deg, 100%, 64%) 100%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: clamp(16px, 4vw, 32px);
+  line-height: clamp(28px, 4vw, 40px);
+  box-shadow: none;
+}
+@media screen and (max-width: 500px) {
+  body .container .about .card.card-pink {
+    height: 120px;
+  }
+}
+body footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 120px;
+  background-color: hsl(233deg, 54%, 16%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body footer .footer {
+  width: 76.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body footer .btn-purple {
+  background: linear-gradient(180deg, hsl(237deg, 100%, 64%) 50%, hsl(322deg, 87%, 55%) 100%);
+}
+body footer .btn-purple:hover {
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
