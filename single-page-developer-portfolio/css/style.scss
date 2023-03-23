@@ -1,0 +1,467 @@
+//Font
+$Main-font : 'Space Grotesk',
+sans-serif;
+//Colors
+$Main-black: rgb(21, 21, 21);
+$Main-green: rgb(78, 225, 160);
+$Dark-gray: rgb(36, 36, 36);
+$Main-gray: rgb(217, 217, 217);
+$Main-white: rgb(255, 255, 255);
+
+$XL-font-size: 88px;
+$XL-line-height: 88px;
+$XL-letter-spacing: -2.5px;
+$XL-weight: 700;
+
+$L-font-size: 48px;
+$L-line-height: 56px;
+$L-letter-spacing: -1.5px;
+$L-weight: 700;
+
+$M-font-size: 24px;
+$M-line-height: 32px;
+$M-weight: 700;
+
+$Regular-font-size: 18px;
+$Regular-line-height: 28px;
+$Regular-weight: 500;
+
+
+@mixin mobile {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+h1 {
+    font-size: clamp($M-font-size , 5vw, $XL-font-size);
+    letter-spacing: $XL-letter-spacing;
+    line-height: clamp($M-line-height , 5vw, $XL-line-height);
+    font-weight: $XL-weight;
+}
+
+h2 {
+    font-size: $L-font-size;
+    letter-spacing: $L-letter-spacing;
+    line-height: $L-line-height;
+    font-weight: $L-weight;
+    margin: 32px 0;
+}
+
+h3 {
+    font-size: $M-font-size;
+    line-height: $M-line-height;
+    font-weight: $M-weight;
+    margin: 32px 0;
+}
+
+body {
+    font-family: $Main-font;
+    font-size: $Regular-font-size;
+    line-height: $Regular-line-height;
+    font-weight: $Regular-weight;
+    background-color: $Main-black;
+    color: $Main-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    main {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        nav {
+            width: 77vw;
+            height: 10vh;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                header {
+                    font-size: $M-font-size;
+                    line-height: $M-line-height;
+                    font-weight: $M-weight;
+                    cursor: pointer;
+                }
+            }
+
+            .social {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: clamp(8px, 2vw, 32px);
+            }
+        }
+
+        #hero {
+            width: 100vw;
+            background-image: url(../assets/images/pattern-rings.svg);
+            background-repeat: no-repeat;
+            background-position: top 15vh left -10vw;
+            background-size: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .hero-container {
+                height: 90vh;
+                width: 77vw;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                background-image: url(../assets/images/image-profile-desktop.webp);
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: contain;
+
+
+
+                .hero-info {
+                    width: 50vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    position: relative;
+                    background-image: url(../assets/images/pattern-circle.svg);
+                    background-repeat: no-repeat;
+                    background-position: bottom right;
+
+
+                    span {
+                        border-bottom: 5px solid $Main-green;
+                    }
+
+                    p {
+                        margin: 0;
+                        color: $Main-gray;
+                        width: 60%;
+                    }
+
+                    a {
+                        margin: 64px 0;
+                        text-decoration: none;
+                        color: $Main-white;
+                        text-transform: uppercase;
+                        border-bottom: 3px solid $Main-green;
+
+                        &:hover {
+                            color: $Main-green;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        #skills {
+            width: 100vw;
+            margin: 64px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(../assets/images/pattern-rings.svg) no-repeat right -10vw bottom;
+
+            .skills-list {
+                width: 77vw;
+                border-top: 2px solid $Main-gray;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: stretch;
+                 @include mobile{
+                    text-align: center;
+                 }
+                .box {
+                    width: 340px;
+
+                    h3 {
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $Main-green;
+                        }
+                    }
+
+                    p {
+                        color: $Main-gray;
+                    }
+                }
+            }
+        }
+
+        #projects {
+            margin: 64px 0;
+            width: 77vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .projects-header {
+                width: 100%;
+                margin-bottom: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                header {
+                    font-size: $XL-font-size;
+                    letter-spacing: $XL-letter-spacing;
+                    line-height: $XL-line-height;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $Main-white;
+                    text-transform: uppercase;
+                    border-bottom: 3px solid $Main-green;
+                }
+            }
+
+            .projects-list {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 28px;
+
+                .projects-item {
+                    width: clamp(340px, 80vw, 540px);
+                    height: clamp(398px, 80vw, 487px);
+                    margin-bottom: 64px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    cursor: pointer;
+                    position: relative;
+
+                    img {
+                        width: clamp(340px, 80vw, 540px);
+                        height: clamp(250px, 80vw, 400px);
+                        object-fit: contain;
+                    }
+
+                    h3 {
+                        margin: 0;
+
+                    }
+
+                    p {
+                        margin: 0;
+                    }
+
+                    &:hover img {
+                        opacity: .2;
+                        transition: all 0.4s ease-in-out 0s;
+                    }
+
+                    .links {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        opacity: 0;
+                        transform: translate(-50%, -50%);
+                        transition: all 0.3s ease-in-out 0s;
+
+                        a {
+                            color: $Main-white;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            border-bottom: 1px solid $Main-green;
+                            margin-bottom: 32px;
+
+                            &:hover {
+                                color: $Main-green;
+                            }
+                        }
+
+                    }
+
+                    &:hover .links {
+                        top: 40%;
+                        left: 50%;
+                        opacity: 1;
+                    }
+                }
+
+            }
+        }
+
+        footer {
+            width: 100vw;
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(../assets/images/pattern-rings.svg) no-repeat bottom 15vh left -10vw, $Dark-gray;
+
+            @include mobile {
+                height: 100vh;
+            }
+
+            .footer-container {
+                width: 77vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .footer-info {
+                    height: 50vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15vw;
+
+                    @include mobile {
+                        gap: 0;
+                        flex-direction: column;
+                    }
+
+                    .footer-contact {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        @include mobile {
+                            text-align: center;
+                        }
+
+                        header {
+                            font-size: $L-font-size;
+                            margin: 32px 0;
+                        }
+
+                        p {
+                            font-size: $Regular-font-size;
+                            line-height: $Regular-line-height;
+                            font-weight: $Regular-weight;
+                            color: $Main-gray;
+                        }
+                    }
+
+                    .footer-form {
+                        flex: 1;
+
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            input,
+                            textarea {
+                                width: 100%;
+                                height: 5vh;
+                                background: transparent;
+                                border: none;
+                                border-bottom: 2px solid $Main-gray;
+                                color: $Main-white;
+                                margin: 8px 0;
+                                font-size: $Regular-font-size;
+                                color: $Main-gray;
+                                padding-left: 16px;
+
+                                &:focus {
+                                    outline: none;
+                                    border-bottom: 2px solid $Main-green;
+                                }
+
+                                &::placeholder {
+                                    font-size: $Regular-font-size;
+                                    color: $Main-gray;
+                                }
+
+                                +label {
+                                    opacity: 0;
+                                }
+
+                                &:focus+label {
+                                    opacity: 1;
+                                    font-size: 12px;
+                                }
+
+                                &.errorInput {
+                                    border-bottom: 2px solid #FF6F5B;
+                                }
+                            }
+
+                            .hidden {
+                                opacity: 0;
+                            }
+
+                            .error {
+                                color: #FF6F5B;
+                                font-size: 12px;
+                                align-self: flex-end;
+                            }
+
+                            button {
+                                align-self: flex-end;
+                                margin: 16px 0;
+                                background: transparent;
+                                border: none;
+                                color: $Main-white;
+                                text-transform: uppercase;
+                                border-bottom: 3px solid $Main-green;
+                                font-size: $Regular-font-size;
+                                font-weight: $XL-weight;
+                                cursor: pointer;
+
+                                &:hover {
+                                    color: $Main-green;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .footer-menu {
+                    height: 10vh;
+                    width: 100%;
+                    border-top: 1px solid $Main-gray;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    @include mobile {
+                        gap: 0;
+                        margin-top: 15vh;
+                        flex-direction: column;
+                    }
+
+                    .logo {
+                        header {
+                            font-size: $M-font-size;
+                            line-height: $M-line-height;
+                            font-weight: $M-weight;
+                        }
+                    }
+
+                    .social {
+                        display: flex;
+                        align-items: center;
+                        gap: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+}

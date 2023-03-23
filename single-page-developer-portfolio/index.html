@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Single-page developer portfolio</title>
+  </head>
+
+  <body>
+    <main>
+      <nav>
+        <div class="logo">
+          <header>adamkeyes.</header>
+        </div>
+        <div class="social">
+          <img src="./assets/images/icon-github.svg" aria-hidden="true" />
+          <img
+            src="./assets/images/icon-frontend-mentor.svg"
+            aria-hidden="true"
+          />
+          <img src="./assets/images/icon-linkedin.svg" aria-hidden="true" />
+          <img src="./assets/images/icon-twitter.svg" aria-hidden="true" />
+        </div>
+      </nav>
+
+      <section id="hero">
+        <div class="hero-container">
+          <div class="hero-info">
+            <h1>Nice to meet you! I'm <span>Adam Keyes</span>.</h1>
+            <p>
+              Based in the UK, I'm a front-end developer passionate about
+              building accessible web apps that users love.
+            </p>
+            <a href="#">Contact me</a>
+            <div class="cirle"></div>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="skills-list">
+          <div class="box">
+            <h2>HTML</h2>
+            <p>4 Years Experience</p>
+          </div>
+          <div class="box">
+            <h2>CSS</h2>
+            <p>4 Years Experience</p>
+          </div>
+          <div class="box">
+            <h2>JavaScript</h2>
+            <p>4 Years Experience</p>
+          </div>
+          <div class="box">
+            <h2>Accessibility</h2>
+            <p>4 Years Experience</p>
+          </div>
+          <div class="box">
+            <h2>React</h2>
+            <p>4 Years Experience</p>
+          </div>
+          <div class="box">
+            <h2>Sass</h2>
+            <p>4 Years Experience</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="projects-header">
+          <header>Projects</header>
+          <a href="#">Contact me</a>
+        </div>
+        <div class="projects-list">
+          <div class="projects-item">
+            <img
+              src="./assets/images/thumbnail-project-1-large.webp"
+              alt="Design portfolio"
+            />
+            <h3>Design portfolio</h3>
+            <p>HTML CSS</p>
+            <div class="links">
+              <a href="#">View Project</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img
+              src="./assets/images/thumbnail-project-2-large.webp"
+              alt="E-learning landing page"
+            />
+            <h3>E-learning landing page</h3>
+            <p>HTML CSS JavaScript</p>
+            <div class="links">
+              <a href="#">View Project</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img
+              src="./assets/images/thumbnail-project-3-large.webp"
+              alt="Todo web app"
+            />
+            <h3>Todo web app</h3>
+            <p>HTML CSS JavaScript</p>
+            <div class="links">
+              <a href="#">View Project</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img
+              src="./assets/images/thumbnail-project-4-large.webp"
+              alt="Entertainment web app"
+            />
+            <h3>Entertainment web app</h3>
+            <p>HTML CSS JavaScript</p>
+            <div class="links">
+              <a href="#">View Project</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img
+              src="./assets/images/thumbnail-project-5-large.webp"
+              alt="Memory Game"
+            />
+            <h3>Memory Game</h3>
+            <p>HTML CSS JavaScript</p>
+            <div class="links">
+              <a href="#">View Project</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="projects-item">
+            <img
+              src="./assets/images/thumbnail-project-6-large.webp"
+              alt="Art gallery showcase"
+            />
+            <h3>Art gallery showcase</h3>
+            <p>HTML CSS JavaScript</p>
+            <div class="links">
+              <a href="#">View Project</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-container">
+          <div class="footer-info">
+            <div class="footer-contact">
+              <header>Contact</header>
+              <p>
+                I would love to hear about your project and how I could help.
+                Please fill in the form, and I'll get back to you as soon as
+                possible.
+              </p>
+            </div>
+            <div class="footer-form">
+              <form name="contactForm" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="NAME" />
+                <div id="nameError" class="error hidden">
+                  "Sorry, invalid format here"
+                </div>
+
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="EMAIL"
+                />
+                <div id="emailError" class="error hidden">
+                  "Sorry, invalid format here"
+                </div>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="MESSAGE"
+                ></textarea>
+                <div id="messageError" class="error hidden">
+                  "Sorry, invalid format here"
+                </div>
+
+                <button type="submit">Send Message</button>
+                <div id="success" class="hidden">Send Success!</div>
+              </form>
+            </div>
+          </div>
+          <div class="footer-menu">
+            <div class="logo">
+              <header>adamkeyes.</header>
+            </div>
+            <div class="social">
+              <img src="./assets/images/icon-github.svg" aria-hidden="true" />
+              <img
+                src="./assets/images/icon-frontend-mentor.svg"
+                aria-hidden="true"
+              />
+              <img src="./assets/images/icon-linkedin.svg" aria-hidden="true" />
+              <img src="./assets/images/icon-twitter.svg" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="./js/app.js"></script>
+</html>
