@@ -1,0 +1,233 @@
+//Fonts
+
+$Font-Fraunces: 'Fraunces', serif
+$Font-Manrope: 'Manrope', sans-serif
+$Font-size: 18px
+$Line-space: 32px
+$L-Font-Family: $Font-Fraunces
+$L-Font-size: 80px
+$L-Line-Space: 80px
+
+$M-Font-Family: $Font-Fraunces
+$M-Font-size: 56px
+$M-Line-Space: 64px
+
+$S-Font-Family: $Font-Fraunces
+$S-Font-size: 32px
+$S-Line-Space: 40px
+
+//Colors
+$Purple: rgb(36,5,62)
+$Cyan: rgb(68,255,161)
+$Gray: rgb(88,77,98)
+$Pink: rgb(253,250,255)
+$White: rgb(255,255,255)
+
+@mixin mobile
+    @media (max-width: 500px) 
+        @content
+@mixin tablet
+    @media (min-width: 501px) AND (max-width: 901px)
+        @content
+    
+body
+    font-family: $Font-Manrope
+    font-size: $Font-size
+    line-height: $Line-space
+    display: flex
+    align-items: center
+    justify-content: center
+    //buttons
+    a
+        margin: 32px 0
+        text-decoration: none
+        font-weight: 600
+        @include mobile
+            margin: 8px 0
+    .secondary
+        color: $White
+        border-bottom: 2px solid $Cyan
+        &:hover
+            color: $Cyan   
+    .primary
+        padding: 14px 32px 
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 2px solid $Cyan 
+        background-color: $Cyan
+        color: $Purple
+        &:hover
+            background: $Purple
+            color: $Cyan
+    //buttons
+    section
+        width: 100vw
+
+    main
+        position: relative
+    nav
+        width: 80vw
+        position: absolute
+        height: 10vh
+        display: flex
+        align-items: center
+        justify-content: space-between
+        top: 0
+        left: 5%
+        @include mobile
+            width: 90vw
+    .hero
+        background: url(../assets/images/bg-pattern-1.svg) no-repeat left -10vw center, url(../assets/images/bg-pattern-2.svg) no-repeat right center, $Purple
+        height: 80vh
+        display: flex
+        flex-direction: column
+        align-items: center 
+        justify-content: center
+        border-bottom-left-radius: 35%
+        border-bottom-right-radius: 35%  
+        @include mobile
+            background: $Purple
+            height: 65vh
+        header
+            margin: 32px 0
+            width: 50vw
+            text-align: center
+            font-family: $L-Font-Family
+            font-size: $L-Font-size  
+            line-height: $L-Line-Space
+            color: $White
+            @include mobile
+                width: 60vw 
+                font-size: $S-Font-size
+                line-height: $S-Line-Space
+            span
+                border-bottom: 2px solid $Cyan
+        img
+            width: 767px
+            height: 441px
+            object-fit: cover
+            margin-bottom: -20%
+            @include mobile
+                width: 320px
+                height: 184px
+                margin-bottom: -30%
+            @include tablet
+                width: 514px
+                height: 296px
+                margin-bottom: -30%
+    .features
+        position: relative
+        margin-top: -15% 
+        height: 90vh
+        background-color: $Pink
+        display: flex
+        align-items: center
+        justify-content: center
+        border-bottom-left-radius: 35%
+        border-bottom-right-radius: 35%  
+        z-index: -1
+        
+        .features-items
+            width: 80vw
+            margin-top: 20% 
+            display: flex
+            align-items: center
+            justify-content: center
+            color: $Purple
+            gap: 32px
+            text-align: center
+            @include mobile 
+                margin-top: 100vh
+                flex-direction: column
+            @include tablet
+                flex-direction: column
+                margin-top: 50vh
+                height: auto
+
+            .item
+                min-width: 354px
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                .item-number
+                    width: 56px
+                    height: 56px
+                    border-radius: 50%
+                    border:1px solid $Purple
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    font-family: $Font-Fraunces
+                    font-size: $S-Font-size
+                header
+                    font-family: $Font-Fraunces
+                    font-size: $S-Font-size
+                    line-height: $S-Line-Space
+                    margin-top: 56px 
+
+    .about
+        margin: 10vh 0
+        display: flex
+        align-items: center
+        justify-content: center
+        @include mobile
+            margin-top: 100vh
+        @include tablet
+            margin-top: 50vh
+        .about-container
+            width: 80vw
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: flex-end
+        img
+            position: absolute
+            width: 477px
+            height: 477px
+            object-fit: cover
+            top: 0  
+            left: 0
+            z-index: -1
+            @include mobile
+                top: -20vh
+                width: 281px
+                height: 281px
+            @include tablet
+                top: -20vh
+                left: 20%
+        .box
+            padding: 64px
+            width: 600px
+            background: url(../assets/images/bg-pattern-1.svg) no-repeat right bottom -10%, $Purple
+            margin-top: 10%
+            color: $White
+            @include mobile
+                margin-top: 40%
+                width: 375px
+                padding: 16px
+                background: $Purple
+                text-align: center
+            header
+                font-family: $Font-Fraunces
+                font-size: $M-Font-size
+                margin: 32px 0
+                @include mobile
+                    font-size: $S-Font-size
+            a
+                width: 30%
+                @include mobile
+                    width: 70%
+                    margin: 8px 0
+    footer
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        margin: 10vh 0
+        .social
+            cursor: pointer
+            margin: 64px 0
+            &:hover
+                fill: $Cyan
