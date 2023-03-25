@@ -1,0 +1,316 @@
+//FONTS
+$Font-Red-Hat: 'Red Hat Display', sans-serif;
+$Regular-FS: 18px;
+$Regular-LH: 26px;
+
+$Overline-FS: 16px;
+$Overline-LH:26px;
+$Overline-LS:4px;
+
+//COLORS
+$Green: rgb(77,150,168);
+$Purple: rgb(133,95,177);
+$Dark-Purple: rgb(40,40,61);
+$Gray: rgb(135,135,157);
+$Blue: rgb(143,227,249);
+$Pink: rgb(217,184,255);
+$White: rgb(250,250,250);
+
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 500px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) and (min-width: #{$mobile-width + 1}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+
+h1{
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 800;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 15px 0;
+    @include tablet{
+        font-size: 48px;
+        line-height: 48px;
+    }
+    @include mobile{
+        font-size: 40px;
+        line-height: 44px;
+    }
+}
+
+h2{
+    font-size: 40px;
+    line-height: 44px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+body{
+    font-family: $Font-Red-Hat;
+    font-size: $Regular-FS;
+    line-height: $Regular-LH;
+    background-color: $White;
+    a{
+        text-decoration: none;
+        font-weight: 800;
+        padding: 16px 32px;
+        color: $White;
+        border-radius: 29px;
+        cursor: pointer;
+        &.btn-green{
+            background-color: $Green;
+            &:hover{
+                background-color: $Blue;
+            }
+        }
+        &.btn-purple{
+            background-color: $Purple;
+            &:hover{
+                background-color: $Pink;
+            }
+        }
+        span{
+            color: $Blue
+        }
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .logo{
+            height: 10vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero{
+            width: 100vw;
+            .hero-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include tablet{
+                    position: relative;
+                }
+                .hero-image{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden ;
+                    &.left{
+                        justify-content: flex-start;
+                    }
+                    &.right{
+                        justify-content: end;
+                    }
+                    img{
+                        width: 362px;
+                        height: 335px;
+                        object-fit: contain;
+                        @include mobile{
+                            width: 207px;
+                            height: 153px;
+                        }
+                    }
+                }
+                .hero-content{
+                    flex: 1.2;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    @include tablet{
+                        flex: 1;
+                        position: absolute;
+                        width: 440px;
+                        margin-top: 60vh;
+                    }
+                    @include mobile{
+                        flex: 1;
+                        position: absolute;
+                        width: 360px;
+                        margin-top: 80vh;
+                    }
+                    h1{
+                        width: 440px;
+                    }
+                    p{
+                        color: $Gray;
+                        
+                    }
+                    .content-links{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 16px;
+                    }
+                }
+            }
+        }
+    
+        .section-divider{
+            margin-top: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            .line{
+                height: 84px;
+                width: 1px;
+                background-color: $Gray;
+            }
+            .circle{
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $Gray;
+                color: $Gray;
+                font-weight: 800;
+                background-color: $White;
+            }
+        }
+        .one{
+            @include tablet {
+                margin-top: 382px;
+            }   
+            @include mobile {
+                margin-top: 382px;
+            }     
+        }
+
+
+        .gallery{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .gallery-container{
+                width: 77vw;
+                margin: 64px 0;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                @include tablet{
+                    width: 90vw;
+                }
+                @include mobile{
+                    width: 90vw;
+                    justify-content: center;
+                    gap: 10px;
+                }
+                .image-box{
+                    width: 255px;
+                    height: 242px;
+                    border-radius: 18px;
+                    overflow: hidden;
+                    @include tablet{
+                        width: 164px;
+                        height: 156px;
+                    }
+                    @include mobile{
+                        width: 151px;
+                        height: 143px;
+                    }
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .gallery-info{
+                width: 500px;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                @include mobile{
+                    width: 327px;
+                }
+                span{
+                    font-size: $Overline-FS;
+                    letter-spacing: $Overline-LS;
+                    line-height: $Overline-LH;
+                    font-weight: 800;
+                    color: $Green;
+                    text-transform: uppercase;
+                }
+                p{
+                    color: $Gray;
+                }
+            }
+
+        }
+
+        footer{
+            width: 100vw;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(../assets/desktop/image-footer.jpg) ;
+            margin-top: -28px;
+            z-index: -1;
+            position: relative;
+            @include mobile{
+                height: 60vh;
+            }
+            .overlay{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(77,150,168, 0.9);
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            .footer-container{
+                width: 78vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include tablet{
+                    flex-direction: column;
+                    text-align: center;
+                }
+                @include mobile{
+                    flex-direction: column;
+                    text-align: center;
+                }
+                color: $White;
+                .footer-header{
+                    flex: 1;
+                }
+                .footer-info{
+                    flex: 1;
+                }
+                .footer-contact{
+                    flex: 1;
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+}
