@@ -35,6 +35,7 @@ body {
   font-size: 18px;
   line-height: 26px;
   background-color: rgb(250, 250, 250);
+  margin: 0;
 }
 body a {
   text-decoration: none;
@@ -67,6 +68,7 @@ body main {
   justify-content: center;
 }
 body main .logo {
+  margin-top: 10vh;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -259,7 +261,8 @@ body main footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../assets/desktop/image-footer.jpg);
+  background: url(../assets/desktop/image-footer.jpg) no-repeat;
+  background-size: cover;
   margin-top: -28px;
   z-index: -1;
   position: relative;
