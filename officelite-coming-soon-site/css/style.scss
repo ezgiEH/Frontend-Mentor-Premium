@@ -65,7 +65,7 @@ body {
     font-family: $Font-Kumbh;
     font-size: $Regular-FS;
     line-height: $Regular-LH;
-
+    height: auto;
     @include mobile {
         display: flex;
         flex-direction: column;
