@@ -1,0 +1,549 @@
+h1 {
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 48px;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+}
+@media (max-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../assets/home/bg-pattern-header.svg) rgb(250, 250, 250);
+  background-repeat: no-repeat;
+  background-position: right -10vw top -20vh;
+  background-size: 870px;
+}
+body main#sign-up {
+  background: rgb(250, 250, 250);
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+body main#sign-up .rectangle {
+  position: absolute;
+  right: 0;
+  width: 420px;
+  height: 100vh;
+  background: url(../assets/home/bg-pattern-header.svg) rgb(37, 41, 58);
+  background-size: cover;
+  background-position: left;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body main#sign-up .rectangle {
+    bottom: 0;
+    width: 100vw;
+    height: 380px;
+  }
+}
+@media (max-width: 500px) {
+  body main#sign-up .rectangle {
+    bottom: 0;
+    width: 100vw;
+    height: 380px;
+  }
+}
+body main a {
+  width: 171px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 28px;
+}
+body main a.btn-primary {
+  background-color: rgb(81, 117, 255);
+  color: rgb(255, 255, 255);
+}
+body main a.btn-primary:hover {
+  background-color: rgb(130, 156, 255);
+}
+body main a.btn-secondary {
+  background-color: rgba(116, 123, 149, 0.1);
+  color: rgb(81, 117, 255);
+}
+body main a.btn-secondary:hover {
+  background-color: rgb(130, 156, 255);
+  color: rgb(255, 255, 255);
+}
+body main a.btn-white {
+  background-color: rgb(255, 255, 255);
+  color: rgb(81, 117, 255);
+}
+body main a.btn-white:hover {
+  background-color: rgb(37, 41, 58);
+}
+body nav {
+  width: 76.4vw;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+body .hero {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .hero {
+    height: 50vh;
+  }
+}
+@media (max-width: 500px) {
+  body .hero {
+    height: 100vh;
+  }
+}
+body .hero .hero-container {
+  width: 76.4vw;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .hero .hero-container {
+    width: 90vw;
+  }
+}
+@media (max-width: 500px) {
+  body .hero .hero-container {
+    flex-direction: column-reverse;
+  }
+}
+body .hero .hero-container .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 388px;
+}
+@media (max-width: 500px) {
+  body .hero .hero-container .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+}
+body .hero .hero-container .hero-content h1 {
+  color: rgb(51, 57, 80);
+}
+body .hero .hero-container .hero-content p {
+  color: rgb(116, 123, 149);
+}
+body .hero .hero-container .hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  body .hero .hero-container .hero-image {
+    justify-content: center;
+  }
+}
+body .hero .hero-container .hero-image img {
+  width: 475px;
+  height: 531px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .hero .hero-container .hero-image img {
+    width: 281px;
+    height: 314px;
+  }
+}
+@media (max-width: 500px) {
+  body .hero .hero-container .hero-image img {
+    width: 171px;
+    height: 192px;
+  }
+}
+body .price {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+@media (max-width: 500px) {
+  body .price {
+    height: -moz-max-content;
+    height: max-content;
+    margin: 5vh 0;
+  }
+}
+body .price .price-container {
+  width: 76.4vw;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .price .price-container {
+    width: 90vw;
+  }
+}
+body .price .price-container .price-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .price .price-container .price-list {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  body .price .price-container .price-list {
+    flex-direction: column;
+  }
+}
+body .price .price-container .price-list .list-item {
+  flex: 1;
+  padding: 20px 0;
+  height: 470px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 14px;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .price .price-container .price-list .list-item {
+    padding: 48px;
+    width: 80%;
+    flex-direction: row;
+  }
+}
+@media (max-width: 500px) {
+  body .price .price-container .price-list .list-item {
+    padding: 48px;
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .price .price-container .price-list .list-item .item-header {
+    text-align: start;
+  }
+}
+body .price .price-container .price-list .list-item .item-header h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+body .price .price-container .price-list .list-item .item-header header {
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 700;
+}
+body .price .price-container .price-list .list-item .item-header p {
+  margin: 0;
+  color: rgb(51, 57, 80);
+}
+body .price .price-container .price-list .list-item .item-content p {
+  color: rgb(116, 123, 149);
+}
+body .price .price-container .price-list .list-item.pro {
+  background: rgb(81, 117, 255) url(../assets/home/bg-pattern-pricing.svg) no-repeat;
+  background-size: 500px;
+  color: rgb(255, 255, 255);
+}
+body .price .price-container .price-list .list-item.pro .item-header p {
+  color: rgb(255, 255, 255);
+}
+body .price .price-container .price-list .list-item.pro .item-content p {
+  color: rgb(255, 255, 255);
+}
+body .countdown {
+  width: 100vw;
+  height: 60vh;
+  margin-top: -235px;
+  background: url(../assets/home/bg-pattern-footer.svg) rgb(37, 41, 58);
+  background-position: right -40vw;
+  background-repeat: no-repeat;
+  background-size: 1440px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  body .countdown {
+    margin-top: 5vh;
+  }
+}
+body .countdown .countdown-container {
+  width: 76.4vw;
+  margin: 10vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  body .countdown .countdown-container {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 40vh;
+  }
+}
+body .countdown .countdown-clock {
+  color: rgb(255, 255, 255);
+}
+body .countdown .countdown-clock span {
+  color: rgb(81, 117, 255);
+}
+body .countdown .countdown-clock #countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+body .countdown .countdown-clock #countdown .box {
+  width: 100px;
+  height: 128px;
+  background-color: rgb(51, 57, 80);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  body .countdown .countdown-clock #countdown .box {
+    width: 72px;
+    height: 92px;
+  }
+}
+body .countdown .countdown-clock #countdown .box p {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 14px;
+}
+@media (max-width: 500px) {
+  body .countdown .countdown-clock #countdown .box p {
+    font-size: 28px;
+    line-height: 48px;
+    margin: 7px;
+  }
+}
+body .countdown .countdown-clock #countdown .box span {
+  color: rgb(116, 123, 149);
+  font-weight: 700;
+}
+body .sign-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .sign-up .signup-container {
+  width: 76.4vw;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .sign-up .signup-container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  body .sign-up .signup-container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+body .sign-up .signup-container .content {
+  flex: 1;
+  color: rgb(51, 57, 80);
+  z-index: 2;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .sign-up .signup-container .content {
+    flex: 0;
+  }
+}
+body .sign-up .signup-container .content p {
+  color: rgb(116, 123, 149);
+}
+body .sign-up .signup-container .signup-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+body .sign-up .signup-container .signup-form form {
+  width: 420px;
+  height: 508px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  box-shadow: 10px 2px 25px rgba(116, 123, 149, 0.2);
+}
+@media (max-width: 500px) {
+  body .sign-up .signup-container .signup-form form {
+    width: 327px;
+    height: 500px;
+  }
+}
+body .sign-up .signup-container .signup-form form input {
+  width: 78%;
+  height: 24px;
+  padding: 16px;
+  border: none;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.1);
+  background-color: rgb(250, 250, 250);
+  font-size: 16px;
+  color: rgb(116, 123, 149);
+  outline: none;
+}
+@media (max-width: 500px) {
+  body .sign-up .signup-container .signup-form form input {
+    height: 12px;
+  }
+}
+body .sign-up .signup-container .signup-form form input.error {
+  border-bottom: 1px solid rgb(204, 91, 91);
+  background: url(../assets/sign-up/icon-cross.svg) no-repeat right;
+  color: rgb(204, 91, 91);
+}
+body .sign-up .signup-container .signup-form form select {
+  display: block;
+  width: 85%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.1);
+  border: none;
+  background-color: rgb(250, 250, 250);
+  cursor: pointer;
+}
+body .sign-up .signup-container .signup-form form option {
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(116, 123, 149, 0.1);
+  cursor: pointer;
+}
+body .sign-up .signup-container .signup-form form button {
+  width: 78%;
+  height: 56px;
+  border: none;
+  border-radius: 32px;
+  background-color: rgb(81, 117, 255);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 700;
+}
+body .sign-up .signup-container .signup-form form button:hover {
+  background-color: rgb(130, 156, 255);
+}
+body .sign-up .signup-container .countdown-clock {
+  color: rgb(51, 57, 80);
+}
+body .sign-up .signup-container .countdown-clock h3 {
+  font-weight: 600;
+}
+body .sign-up .signup-container .countdown-clock span {
+  color: rgb(81, 117, 255);
+}
+body .sign-up .signup-container .countdown-clock #countdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+@media (max-width: 1024px) and (min-width: 501px) {
+  body .sign-up .signup-container .countdown-clock #countdown {
+    justify-content: center;
+  }
+}
+body .sign-up .signup-container .countdown-clock #countdown .box {
+  width: 100px;
+  height: 128px;
+  background-color: rgba(116, 123, 149, 0.1);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  body .sign-up .signup-container .countdown-clock #countdown .box {
+    width: 72px;
+    height: 92px;
+  }
+}
+body .sign-up .signup-container .countdown-clock #countdown .box p {
+  color: rgb(81, 117, 255);
+  font-size: 56px;
+  font-weight: 700;
+  margin: 14px;
+}
+@media (max-width: 500px) {
+  body .sign-up .signup-container .countdown-clock #countdown .box p {
+    font-size: 32px;
+    line-height: 48px;
+    margin: 7px;
+  }
+}
+body .sign-up .signup-container .countdown-clock #countdown .box span {
+  color: rgb(116, 123, 149);
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  body .sign-up .signup-container .countdown-clock #countdown .box span {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=style.css.map */

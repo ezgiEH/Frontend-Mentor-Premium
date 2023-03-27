@@ -1,0 +1,616 @@
+//FONTS
+$Font-Kumbh: 'Kumbh Sans', sans-serif;
+$Regular-FS: 18px;
+$Regular-FS-2: 16px;
+$Regular-LH: 28px;
+
+//COLORS
+$Main-Blue: rgba(81, 117, 255, 1);
+$Hover-Blue: rgba(130, 156, 255, 1);
+$Dark-Gray: rgba(51, 57, 80, 1);
+$Font-Gray: rgba(116, 123, 149, 1);
+$Light-Gray: rgba(116, 123, 149, .1);
+$Main-Black: rgba(37, 41, 58, 1);
+$Main-Red: rgba(204, 91, 91, 1);
+$White: rgb(255, 255, 255);
+$BG-White: rgb(250, 250, 250);
+
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 500px;
+
+@mixin tablet {
+    @media (max-width: #{$desktop-width}) and (min-width: #{$mobile-width + 1}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+
+h1 {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+    @include mobile {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 48px;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    font-family: $Font-Kumbh;
+    font-size: $Regular-FS;
+    line-height: $Regular-LH;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url(../assets/home/bg-pattern-header.svg) $BG-White;
+        background-repeat: no-repeat;
+        background-position: right -10vw top -20vh;
+        background-size: 870px;
+
+        &#sign-up {
+            background: $BG-White;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+
+            .rectangle {
+                position: absolute;
+                right: 0;
+                width: 420px;
+                height: 100vh;
+                background: url(../assets/home/bg-pattern-header.svg) $Main-Black;
+                background-size: cover;
+                background-position: left;
+
+                @include tablet {
+                    bottom: 0;
+                    width: 100vw;
+                    height: 380px;
+                }
+
+                @include mobile {
+                    bottom: 0;
+                    width: 100vw;
+                    height: 380px;
+                }
+            }
+        }
+
+        a {
+            width: 171px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: $Regular-FS-2;
+            font-weight: 700;
+            border-radius: 28px;
+
+            &.btn-primary {
+                background-color: $Main-Blue;
+                color: $White;
+
+                &:hover {
+                    background-color: $Hover-Blue;
+                }
+            }
+
+            &.btn-secondary {
+                background-color: $Light-Gray;
+                color: $Main-Blue;
+
+                &:hover {
+                    background-color: $Hover-Blue;
+                    color: $White;
+                }
+            }
+
+            &.btn-white {
+                background-color: $White;
+                color: $Main-Blue;
+
+                &:hover {
+                    background-color: $Main-Black;
+                }
+            }
+        }
+    }
+
+    nav {
+        width: 76.4vw;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .hero {
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            height: 50vh;
+        }
+
+        @include mobile {
+            height: 100vh;
+        }
+
+        .hero-container {
+            width: 76.4vw;
+            display: flex;
+            gap: 20px;
+
+            @include tablet {
+                width: 90vw;
+            }
+
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex: 1;
+                height: 388px;
+
+                @include mobile {
+                    text-align: center;
+                    align-items: center;
+                }
+
+                h1 {
+                    color: $Dark-Gray;
+                }
+
+                p {
+                    color: $Font-Gray;
+                }
+
+            }
+
+            .hero-image {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                @include mobile {
+                    justify-content: center;
+                }
+
+                img {
+                    width: 475px;
+                    height: 531px;
+                    object-fit: contain;
+
+                    @include tablet {
+                        width: 281px;
+                        height: 314px;
+                    }
+
+                    @include mobile {
+                        width: 171px;
+                        height: 192px;
+                    }
+                }
+            }
+        }
+    }
+
+    .price {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        @include mobile {
+            height: max-content;
+            margin: 5vh 0;
+        }
+
+        .price-container {
+            width: 76.4vw;
+
+            @include tablet {
+                width: 90vw;
+            }
+
+            .price-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 24px;
+
+                @include tablet {
+                    flex-direction: column;
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                }
+
+                .list-item {
+                    flex: 1;
+                    padding: 20px 0;
+                    height: 470px;
+                    background-color: $White;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-align: center;
+                    border-radius: 14px;
+
+                    @include tablet {
+                        padding: 48px;
+                        width: 80%;
+                        flex-direction: row;
+                    }
+
+                    @include mobile() {
+                        padding: 48px;
+                        width: 80%;
+                    }
+
+                    .item-header {
+                        @include tablet {
+                            text-align: start;
+                        }
+
+                        h2 {
+                            margin-top: 20px;
+                            ;
+                            margin-bottom: 40px;
+                        }
+
+                        header {
+                            font-size: 56px;
+                            line-height: 64px;
+                            font-weight: 700;
+                        }
+
+                        p {
+                            margin: 0;
+                            color: $Dark-Gray;
+                        }
+                    }
+
+                    .item-content {
+                        p {
+                            color: $Font-Gray;
+                        }
+                    }
+
+                    &.pro {
+                        background: $Main-Blue url(../assets/home/bg-pattern-pricing.svg) no-repeat;
+                        background-size: 500px;
+                        color: $White;
+
+                        .item-header {
+                            p {
+                                color: $White;
+                            }
+                        }
+
+                        .item-content {
+                            p {
+                                color: $White;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .countdown {
+        width: 100vw;
+        height: 60vh;
+        margin-top: -235px;
+        background: url(../assets/home/bg-pattern-footer.svg) $Main-Black;
+        background-position: right -40vw;
+        background-repeat: no-repeat;
+        background-size: 1440px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        @include mobile {
+            margin-top: 5vh;
+        }
+
+        .countdown-container {
+            width: 76.4vw;
+            margin: 10vh 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include mobile {
+                justify-content: space-between;
+                flex-direction: column;
+                height: 40vh;
+            }
+        }
+
+        .countdown-clock {
+            color: $White;
+
+            span {
+                color: $Main-Blue;
+            }
+
+            #countdown {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .box {
+                    width: 100px;
+                    height: 128px;
+                    background-color: $Dark-Gray;
+                    border-radius: 14px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile {
+                        width: 72px;
+                        height: 92px;
+                    }
+
+                    p {
+                        font-size: 56px;
+                        font-weight: 700;
+                        margin: 14px;
+
+                        @include mobile {
+                            font-size: 28px;
+                            line-height: 48px;
+                            margin: 7px;
+                        }
+                    }
+
+                    span {
+                        color: $Font-Gray;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .sign-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .signup-container {
+            width: 76.4vw;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+
+            @include tablet {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .content {
+                flex: 1;
+                color: $Dark-Gray;
+                z-index: 2;
+
+                @include tablet {
+                    flex: 0;
+                }
+
+                p {
+                    color: $Font-Gray;
+                }
+            }
+
+            .signup-form {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+
+                form {
+                    width: 420px;
+                    height: 508px;
+                    background-color: $BG-White;
+                    border-radius: 32px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 24px;
+                    box-shadow: 10px 2px 25px rgba(116, 123, 149, .2);
+
+                    @include mobile {
+                        width: 327px;
+                        height: 500px;
+                    }
+
+                    input {
+                        width: 78%;
+                        height: 24px;
+                        padding: 16px;
+                        border: none;
+                        border-bottom: 1px solid $Light-Gray;
+                        background-color: $BG-White;
+                        font-size: 16px;
+                        color: $Font-Gray;
+                        outline: none;
+
+                        @include mobile {
+                            height: 12px;
+                        }
+
+                        &.error {
+                            border-bottom: 1px solid $Main-Red;
+                            background: url(../assets/sign-up/icon-cross.svg) no-repeat right;
+                            color: $Main-Red;
+                        }
+                    }
+
+                    select {
+                        display: block;
+                        width: 85%;
+                        padding: 10px;
+                        font-size: 16px;
+                        box-sizing: border-box;
+                        outline: none;
+                        border-bottom: 1px solid $Light-Gray;
+                        border: none;
+                        background-color: $BG-White;
+                        cursor: pointer;
+                    }
+
+                    option {
+                        font-size: 16px;
+                        margin: 10px;
+                        border: none;
+                        border-bottom: 1px solid $Light-Gray;
+                        cursor: pointer;
+                    }
+
+                    button {
+                        width: 78%;
+                        height: 56px;
+                        border: none;
+                        border-radius: 32px;
+                        background-color: $Main-Blue;
+                        color: $White;
+                        font-size: 16px;
+                        font-weight: 700;
+
+                        &:hover {
+                            background-color: $Hover-Blue;
+                        }
+                    }
+                }
+            }
+
+            .countdown-clock {
+                color: $Dark-Gray;
+
+                h3 {
+                    font-weight: 600;
+                }
+
+                span {
+                    color: $Main-Blue;
+                }
+
+                #countdown {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 10px;
+
+                    @include tablet {
+                        justify-content: center;
+                    }
+
+                    .box {
+                        width: 100px;
+                        height: 128px;
+                        background-color: $Light-Gray;
+                        border-radius: 14px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include mobile {
+                            width: 72px;
+                            height: 92px;
+                        }
+
+                        p {
+                            color: $Main-Blue;
+                            font-size: 56px;
+                            font-weight: 700;
+                            margin: 14px;
+
+                            @include mobile {
+                                font-size: 32px;
+                                line-height: 48px;
+                                margin: 7px;
+                            }
+                        }
+
+                        span {
+                            color: $Font-Gray;
+                            font-weight: 700;
+
+                            @include mobile {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

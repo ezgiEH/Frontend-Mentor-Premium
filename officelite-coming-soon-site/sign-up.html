@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Officelite coming soon site</title>
+  </head>
+  <body>
+    <main id="sign-up">
+      <div class="rectangle"></div>
+      <nav>
+        <img src="./assets/shared/logo.svg" alt="officelite" />
+      </nav>
+      <section class="sign-up">
+        <div class="signup-container">
+          <div class="content">
+            <h1>Work smarter. Save time.</h1>
+            <p>
+              Easily manage your projects. Get on the list and receive in-app
+              perks available only to early subscribers. We are moving into
+              final development and getting ready for official launch soon.
+            </p>
+            <div class="countdown-container">
+              <div class="countdown-clock">
+                <h3>Coming <span> 14 May 2023</span></h3>
+                <div id="countdown">
+                  <div class="box" class="signup-box">
+                    <p id="days"></p>
+                    <span>days</span>
+                  </div>
+                  <div class="box" class="signup-box">
+                    <p id="hours"></p>
+                    <span>hours</span>
+                  </div>
+                  <div class="box" class="signup-box">
+                    <p id="minutes"></p>
+                    <span>min</span>
+                  </div>
+                  <div class="box" class="signup-box">
+                    <p id="seconds"></p>
+                    <span>sec</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="signup-form">
+            <form id="signUp-form">
+              <input type="text" placeholder="Name" id="name" />
+              <input type="text" placeholder="Email Address" id="email" />
+              <select name="options" id="packs">
+                <option value="Basic" selected>
+                  <strong>Basic Pack</strong> Free
+                </option>
+                <option value="Pro"><strong>Pro Pack</strong> $9.99</option>
+                <option value="Ultimate">
+                  <strong>Ultimate Pack</strong> $19.99
+                </option>
+              </select>
+              <input type="tel" placeholder="Phone Number" id="phone" />
+              <input type="text" placeholder="Company" id="company" />
+              <button type="submit" value="Submit">Get on the list</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
