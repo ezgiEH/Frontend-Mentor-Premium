@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="mobile-nav">
+          <button id="open-btn">
+            <img src="./images/icon-menu.svg" alt="mobile-menu" />
+          </button>
+          <div id="mobile-menu" class="mobile-menu">
+            <button id="close-btn">
+              <img src="./images/icon-close.svg" alt="close" />
+            </button>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="sneakers" />
+        </div>
+        <div class="navbar-menu">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="profile">
+          <div class="cart-icon" onclick="toogleCart()">
+            <img src="./images/icon-cart.svg" alt="icon-cart" />
+            <span id="count" class="count">0</span>
+          </div>
+          <div class="avatar">
+            <button onclick="toogleCart()">
+              <img src="./images/image-avatar.png" alt="avatar" />
+            </button>
+          </div>
+          <div class="profile-card" id="profile-card">
+            <h3>Cart</h3>
+            <div class="card-content">
+              <div id="cart-items" class="cart-items">
+                <!-- List-items -->
+              </div>
+              <button id="checkout" class="checkout">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="product-section">
+        <div class="product-images">
+          <div class="big-image" id="big-image">
+            <img
+              id="big-image-img"
+              src="./images/image-product-1.jpg"
+              onclick="openModal(this)"
+            />
+          </div>
+          <div class="thumbnail">
+            <img
+              src="./images/image-product-1.jpg"
+              onclick="showBigImage(this)"
+            />
+            <img
+              src="./images/image-product-2.jpg"
+              onclick="showBigImage(this)"
+            />
+            <img
+              src="./images/image-product-3.jpg"
+              onclick="showBigImage(this)"
+            />
+            <img
+              src="./images/image-product-4.jpg"
+              onclick="showBigImage(this)"
+            />
+          </div>
+          <div class="modal" id="modal">
+            <div class="modal-content">
+              <span id="modal-close-btn"
+                ><img src="./images/icon-close.svg"
+              /></span>
+              <img id="modalImg" />
+              <div class="modal-thumbnail">
+                <img
+                  src="./images/image-product-1.jpg"
+                  onclick="showBigImage(this)"
+                />
+                <img
+                  src="./images/image-product-2.jpg"
+                  onclick="showBigImage(this)"
+                />
+                <img
+                  src="./images/image-product-3.jpg"
+                  onclick="showBigImage(this)"
+                />
+                <img
+                  src="./images/image-product-4.jpg"
+                  onclick="showBigImage(this)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-content">
+          <div class="product-description">
+            <span>Sneaker Company</span>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they'll withstand
+              everything the weather can offer.
+            </p>
+          </div>
+          <div class="product-price">
+            <h2>$125.00 <span>50%</span></h2>
+            <p>$250.00</p>
+          </div>
+          <div class="product-add">
+            <div class="add-button">
+              <button id="cart-quantity-decrease" class="minus">
+                <img src="./images/icon-minus.svg" />
+              </button>
+              <input
+                type="number"
+                id="cart-quantity"
+                min="1"
+                value="1"
+                class="amount"
+              />
+              <button id="cart-quantity-increase" class="plus">
+                <img src="./images/icon-plus.svg" />
+              </button>
+            </div>
+            <div>
+              <button id="add-to-cart" class="add-cart">
+                <img src="./images/icon-cart.svg" aria-hidden="true" />
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="./app.js"></script>
+</html>
