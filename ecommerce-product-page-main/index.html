@@ -72,48 +72,58 @@
               id="big-image-img"
               src="./images/image-product-1.jpg"
               onclick="openModal(this)"
+              alt="product-main-image"
             />
           </div>
           <div class="thumbnail">
             <img
               src="./images/image-product-1.jpg"
               onclick="showBigImage(this)"
+              alt="thumbnail-1"
             />
             <img
               src="./images/image-product-2.jpg"
               onclick="showBigImage(this)"
+              alt="thumbnail-2"
             />
             <img
               src="./images/image-product-3.jpg"
               onclick="showBigImage(this)"
+              alt="thumbnail-3"
             />
             <img
               src="./images/image-product-4.jpg"
               onclick="showBigImage(this)"
+              alt="thumbnail-4"
             />
           </div>
           <div class="modal" id="modal">
             <div class="modal-content">
               <span id="modal-close-btn"
                 ><img src="./images/icon-close.svg"
+                alt="close-btn"
               /></span>
               <img id="modalImg" />
               <div class="modal-thumbnail">
                 <img
                   src="./images/image-product-1.jpg"
                   onclick="showBigImage(this)"
+                  alt="modal-thumbnail-1"
                 />
                 <img
                   src="./images/image-product-2.jpg"
                   onclick="showBigImage(this)"
+                  alt="modal-thumbnail-2"
                 />
                 <img
                   src="./images/image-product-3.jpg"
                   onclick="showBigImage(this)"
+                  alt="modal-thumbnail-3"
                 />
                 <img
                   src="./images/image-product-4.jpg"
                   onclick="showBigImage(this)"
+                  alt="modal-thumbnail-4"
                 />
               </div>
             </div>
@@ -136,8 +146,9 @@
           <div class="product-add">
             <div class="add-button">
               <button id="cart-quantity-decrease" class="minus">
-                <img src="./images/icon-minus.svg" />
+                <img src="./images/icon-minus.svg" alt="minus-icon"/>
               </button>
+              <label style="display: none;"></label>
               <input
                 type="number"
                 id="cart-quantity"
@@ -146,12 +157,12 @@
                 class="amount"
               />
               <button id="cart-quantity-increase" class="plus">
-                <img src="./images/icon-plus.svg" />
+                <img src="./images/icon-plus.svg" alt="plus-icon"/>
               </button>
             </div>
             <div>
               <button id="add-to-cart" class="add-cart">
-                <img src="./images/icon-cart.svg" aria-hidden="true" />
+                <img src="./images/icon-cart.svg" alt="cart-icon" />
                 Add to cart
               </button>
             </div>

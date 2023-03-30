@@ -314,6 +314,7 @@ body main .product-section .product-images .thumbnail {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 32px;
 }
 @media (max-width: 500px) {
   body main .product-section .product-images .thumbnail {
