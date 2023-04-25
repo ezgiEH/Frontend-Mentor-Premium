@@ -1,0 +1,169 @@
+:root {
+  --Font-Red: 'Red Hat Text', sans-serif;
+  --Blue: hsl(237, 18%, 59%);
+  --Red: hsl(345, 95%, 68%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: rgb(38, 39, 53);
+  --Black: hsl(234, 17%, 12%);
+
+}
+
+body {
+  margin: 0;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/bg-stars.svg") var(--Black);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: url("../images/pattern-hills.svg") no-repeat bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 32px;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+  color: var(--White);
+}
+
+.countdown {
+  margin: 50px 0;
+  width: 668px;
+  display: flex;
+  gap: 25px;
+  color: var(--Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-section {
+  text-align: center;
+  font-size: 14px;
+}
+
+.time-group {
+  display: flex;
+  gap: 0px;
+}
+
+.time-segment {
+  display: block;
+  font-size: 100px;
+  font-weight: 700;
+  width: 84px;
+}
+
+.segment-display {
+  position: relative;
+  height: 150px;
+}
+
+.segment-display__top,
+.segment-display__bottom {
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.segment-display__top {
+  line-height: 1.5;
+  color: var(--Red);
+  background-color: var(--Very-dark-blue);
+  border-radius: 8px;
+}
+
+.segment-display__bottom {
+  line-height: 0;
+  color: var(--Red);
+  background-color: var(--Dark-blue);
+  border-radius: 8px;
+}
+
+.segment-overlay {
+  position: absolute;
+  top: 0;
+  perspective: 400px;
+  height: 150px;
+  width: 84px;
+  border-radius: 8px;
+}
+
+.segment-overlay__top,
+.segment-overlay__bottom {
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+}
+
+.segment-overlay__top {
+  top: 0;
+  line-height: 1.5;
+  color: var(--Red);
+  background-color: var(--Very-dark-blue);
+  transform-origin: bottom;
+  border-radius: 8px;
+}
+
+.segment-overlay__bottom {
+  bottom: 0;
+  line-height: 0;
+  color: var(--Red);
+  background-color: var(--Dark-blue);
+  transform-origin: top;
+  border-radius: 8px;
+
+}
+
+.segment-overlay.flip .segment-overlay__top {
+  animation: flip-top 0.8s linear;
+}
+
+.segment-overlay.flip .segment-overlay__bottom {
+  animation: flip-bottom 0.8s linear;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50%,
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
