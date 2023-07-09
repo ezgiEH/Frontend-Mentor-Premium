@@ -1,0 +1,326 @@
+$Font-Barlow: 'Barlow', sans-serif;
+
+//COLORS
+$Orange: #F16718;
+$Light-Orange: #FF9B62;
+$Blue: #162542;
+$Light-Blue: #7B8BAD;
+$Gray: #E8EFF2;
+$White: #FFFFFF;
+
+$Radius: 8px;
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+
+h1 {
+    font-size: 56px;
+    line-height: 56px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    color: $Blue;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    color: $Blue;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+    color: $Blue;
+}
+
+body {
+    font-family: $Font-Barlow;
+    font-size: 16px;
+    line-height: 26px;
+    color: $Light-Blue;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    a {
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 16px 26px;
+        border-radius: $Radius;
+
+        &.blue {
+            background-color: $Gray;
+            color: $Blue;
+
+            &:hover {
+                background-color: $Blue;
+                color: $White;
+            }
+        }
+
+        &.orange {
+            background-color: $Orange;
+            color: $White;
+
+            &:hover {
+                background-color: $Light-Orange;
+            }
+        }
+    }
+
+    nav {
+        margin: 64px 0;
+        width: 1100px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            border-radius: 0;
+        }
+
+        @include mobile() {
+            width: 375px;
+            margin: 32px 0;
+        }
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+
+        @include mobile() {
+            width: 375px;
+            height: auto;
+        }
+    }
+
+    .container {
+        width: 1100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile() {
+            flex-direction: column;
+            height: auto;
+            gap: 40px;
+        }
+    }
+
+    img {
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .hero__section {
+        height: 480px;
+
+        @include mobile() {
+            height: auto;
+        }
+
+        .bg-1 {
+            position: absolute;
+            top: 0;
+            left: calc(100% - 140px);
+            width: 255px;
+            height: 240px;
+
+            @include mobile() {
+                display: none;
+            }
+        }
+
+        .hero__content {
+            width: 445px;
+            height: 312px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            @include mobile() {
+                width: 100%;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 26px;
+                margin: 0px 0px 40px 0px;
+            }
+
+            span {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-left: 40px;
+            }
+        }
+
+        img {
+            width: clamp(372px, 50vw, 540px);
+            height: clamp(331px, 50vw, 480px);
+        }
+    }
+
+    .about__section {
+        margin: 40px 0;
+
+        .container {
+            @include mobile() {
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 0;
+                align-items: flex-start;
+            }
+        }
+
+        .bg-2 {
+            position: absolute;
+            bottom: 0;
+            left: -140px;
+            width: 255px;
+            height: 240px;
+
+            @include mobile() {
+                display: none;
+            }
+        }
+
+        .orange__image {
+            position: relative;
+            width: 255px;
+            height: 480px;
+            border-radius: 20px;
+            overflow: hidden;
+
+            @include mobile() {
+                width: 129px;
+                height: 193px;
+            }
+
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: .7;
+                background: $Orange;
+            }
+        }
+
+        .about__img-1 {
+            width: 255px;
+            height: 480px;
+
+            @include mobile() {
+                width: 129px;
+                height: 193px;
+            }
+        }
+
+        .about__img-2 {
+            width: 445px;
+            height: 480px;
+
+            @include mobile() {
+                width: 220px;
+                height: 193px;
+            }
+        }
+
+        .about__content {
+            width: 255px;
+            height: 265px;
+            margin-left: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+
+            p {
+                margin: 0;
+            }
+
+            @include mobile() {
+                width: 327px;
+                margin-left: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+    .features__section {
+        margin: 100px 0;
+        flex-wrap: wrap;
+
+        @include mobile() {
+            margin-top: 40px;
+        }
+
+        figure {
+            width: 255px;
+            height: 323px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+
+            @include mobile() {
+                width: 327px;
+                height: 297px;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    footer {
+        a {
+            font-size: 16px;
+            color: $Orange;
+            padding: 0;
+        }
+    }
+}
